@@ -1,6 +1,6 @@
 import re
 
-def arithmetic_arranger(problems, solucion = False):
+def arithmetic_arranger(problems, solucion=False):
 
     if not problems:
         return ""
@@ -11,7 +11,7 @@ def arithmetic_arranger(problems, solucion = False):
     sumax = ""
     cadena = ""
     for problema in problems:
-        if (re.search("[^\s0-9.+-", problema)):
+        if (re.search("[^\s0-9.+-]", problema)):
             if (re.search("[/]", problema) or re.search("[*]", problema)):
                 return "Error: Operator must be '+' or '-'."
             return "Error: Numbers must only contain digits."
@@ -51,5 +51,5 @@ def arithmetic_arranger(problems, solucion = False):
     if solucion:
         cadena = primero + "\n" + segundo + "\n" + lineas + "\n" + sumax
     else:
-        cadena = primero + "\n" + segundo + "\n" + linea
+        cadena = primero + "\n" + segundo + "\n" + lineas
     return cadena
